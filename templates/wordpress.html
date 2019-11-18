@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+My project
+{% endblock %}
+
+{% block bodycontent %}
+<h2>Wordpress</h2>
+
+<form method="post" enctype="multipart/form-data">
+<div class="panel-group">
+    <div class="col-sm-6">
+        <div class="panel panel-success">
+        <div class="panel-heading">Wordpress Settings</div>
+        <div class="panel-body">
+        
+            <p>Wordpress Container: {{ f.containerWordpress}} True</p>
+            <p>Wordpress User name: {{ f.wordpressUser}}</p>
+            <p>Wordpress Password: {{ f.wordpressPassword}}</p>
+            <label for="file">Upload source code: </label>
+            <input type="file" id="file" name="myFile">
+            <br>
+            <br>
+            <br>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-success">
+        <div class="panel-heading">Database Settings</div>
+        <div class="panel-body">
+
+            <p>Database container: {{ f.containerSql}} True</p>
+            <p>Database User: {{ f.sqlUser }}</p>
+            <p>Database Password: {{ f.sqlPassword }}</p>
+            <p>Database Root Password: {{ f.sqlRootPassword }}</p>
+            <label for="file">Upload database file: </label>
+            <input type="file" id="file" name="myFile">
+            <br>
+
+        </div>
+        </div>
+    </div>
+</div>
+<form>
+
+<div class="col text-center">
+      <button type="submit" class="btn btn-info">Deploy</button>
+</div>
+{% endblock %}
