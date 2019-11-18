@@ -5,5 +5,9 @@ My project
 {% endblock %}
 
 {% block bodycontent %}
-<h1>New project</h1>
+<h2>Create new project</h2>
+<h6>Choose platform:</h6>
+<a href="{% url 'wordpress' %}">Wordpress</a>
+<br>
+<a href="{% url 'ghost' %}">Ghost</a>
 {% endblock %}
